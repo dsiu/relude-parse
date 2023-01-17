@@ -4,9 +4,9 @@
   "description": "Monadic parsing with Relude",
   "main": "index.js",
   "scripts": {
-    "clean": "bsb -clean-world",
-    "build": "bsb -make-world",
-    "watch": "bsb -make-world -w",
+    "clean": "rescript clean",
+    "build": "rescript build",
+    "watch": "rescript build -w",
     "test": "jest",
     "coverage": "jest --coverage --coverage-reporters=lcov --coverage-reporters=text --coverage-directory ./docs/coverage",
     "cleanbuild": "npm run clean && npm run build",
@@ -24,14 +24,14 @@
   },
   "homepage": "https://github.com/reazen/relude-parse#readme",
   "peerDependencies": {
-    "bs-bastet": "^1.2.5",
-    "relude": "^0.59.0"
+    "bs-bastet": "github:dsiu/bastet#rescript-v10",
+    "relude": "github:dsiu/relude#rescript-v10"
   },
   "devDependencies": {
+    "rescript": "^10.0.0",
     "@glennsl/bs-jest": "^0.5.1",
-    "bs-bastet": "^1.2.5",
-    "bs-platform": "^7.2.2",
-    "relude": "^0.59.0"
+    "bs-bastet": "github:dsiu/bastet#rescript-v10",
+    "relude": "github:dsiu/relude#rescript-v10"
   },
   "jest": {
     "verbose": false,

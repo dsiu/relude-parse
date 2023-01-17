@@ -352,6 +352,8 @@ module Infix = {
   include Relude.Extensions.Monad.MonadInfix(Monad);
   include Relude.Extensions.Alt.AltInfix(Alt);
   let (<?>) = flipWithError;
+  /** [dsiu] patch */
+  let (<#>) = (f, x) => map(x, f);
 };
 
 // Bring all the useful operators into scope for use below and in global/local opens of ReludeParse.Parser
